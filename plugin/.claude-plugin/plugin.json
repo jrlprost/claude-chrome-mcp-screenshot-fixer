@@ -1,0 +1,13 @@
+{
+  "name": "claude-chrome-mcp-screenshot-fixer",
+  "version": "1.0.0",
+  "description": "Automatically resize Chrome pages before screenshots to prevent oversized images from Retina/HiDPI displays",
+  "author": {
+    "name": "jrlprost"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrlprost/claude-chrome-mcp-screenshot-fixer"
+  },
+  "keywords": ["claude-code", "claude-code-plugin", "chrome", "chrome-devtools", "mcp", "screenshot", "retina", "hidpi"]
+}

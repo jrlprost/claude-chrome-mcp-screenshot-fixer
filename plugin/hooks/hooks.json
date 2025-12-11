@@ -1,0 +1,16 @@
+{
+  "description": "Ensures Chrome screenshots are taken at optimal viewport size for Retina/HiDPI displays",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__chrome-devtools__take_screenshot",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Before taking a Chrome DevTools screenshot, you MUST first resize the page viewport to avoid oversized images from Retina/HiDPI displays.\n\nREQUIRED ACTION:\n1. First call mcp__chrome-devtools__resize_page with width: 1280, height: 800\n2. Then proceed with the screenshot\n\nIf you have already resized the page in this session to 1280x800, you may proceed.\n\nReturn 'approve' if you will resize first (or already have), or 'deny' if you want to skip the screenshot."
+          }
+        ]
+      }
+    ]
+  }
+}
