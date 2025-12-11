@@ -6,6 +6,18 @@ A Claude Code plugin that automatically ensures optimal viewport sizing before t
 
 On Retina/HiDPI displays, Chrome DevTools MCP captures screenshots at the device pixel ratio (usually 2x). A typical MacBook display at 2560x1664 produces **5120x3328 pixel screenshots** - far too large for efficient use in Claude's context window.
 
+### Error Messages This Plugin Fixes
+
+If you're seeing these errors, this plugin is for you:
+
+```
+API Error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"messages.15.content.2.image.source.base64.data: At least one of the image dimensions exceed max allowed size: 8000 pixels"}}
+```
+
+```
+Image too large: screenshot dimensions exceed maximum allowed size
+```
+
 ## The Solution
 
 This plugin intercepts `mcp__chrome-devtools__take_screenshot` calls and reminds Claude to first resize the viewport to a standard size (1280x800), producing manageable 2560x1600 screenshots.
