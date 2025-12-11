@@ -18,6 +18,10 @@ API Error: 400 {"type":"error","error":{"type":"invalid_request_error","message"
 Image too large: screenshot dimensions exceed maximum allowed size
 ```
 
+```
+Image was too large. Double press esc to go back and try again with a smaller image.
+```
+
 ## The Solution
 
 This plugin intercepts `mcp__chrome-devtools__take_screenshot` calls and reminds Claude to first resize the viewport to a standard size (1280x800), producing manageable 2560x1600 screenshots.
